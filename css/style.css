@@ -1,0 +1,524 @@
+/* CSS du Projet 3
+Site de Velo'v */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+  width: 100%;
+  margin: 0px;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-decoration: white underline;
+  background-color: #e11f26;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+#stationsI {
+  width: 100%;
+  display: flex;
+}
+
+.image {
+  width: 50%;
+  text-align: right;
+}
+
+#stationsN {
+  width: 50%;
+  padding-top: 20px;
+}
+
+.modal-content p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#menu {
+  display: flex;
+  margin: 20px;
+}
+
+.logo {
+  width: 30%;
+  margin-left: 65px;
+}
+
+#presentation {
+  background-color: #f1f1f1;
+  padding: 5px;
+  position: relative;
+}
+
+#titre h1 {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#dateJ {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+
+.navigation {
+  position: relative;
+  width: 70%;
+  height: 45px;
+  list-style: none;
+  padding-bottom: 20px;
+}
+
+.navigation ul li {
+  float: left;
+  font-size: 18px;
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navigation a:link {
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navigation a:hover {
+  text-decoration: underline #e11f26;
+  color: #e11f26;
+}
+
+.diaporama {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.diapo {
+  max-width: 100%;
+  height: auto;
+}
+
+.images {
+  width: 570px;
+  height: 328px;
+  margin: auto;
+}
+
+.boutton {
+  width: 80px;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+#confirm #reserv {
+  display: none;
+}
+
+#stationClient {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+#carto {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+
+}
+
+.carte {
+  width: 65%;
+  height: auto;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+#stationC {
+  width: 100%;
+  padding: 5px;
+}
+
+#compteur {
+  padding-left: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#choice {
+  width: 100%;
+  background-color: #f1f1f1;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+#choice strong {
+  font-weight: bold;
+}
+
+#choice button {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  background-color: #e11f26;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+#choice button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+#myModal button {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+  background-color: #e11f26;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+#myModal button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+#stationsVelo {
+  width: 35%;
+  height: auto;
+}
+
+#reservation {
+  width: 100%;
+  height: 215px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+.stations {
+  width: 100%;
+  height: 255px;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+
+#reservation p {
+  margin: 20px;
+}
+
+.bas {
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.legales {
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+}
+
+.legales h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.legales h3 {
+  margin-top: 15px;
+}
+
+.legales p {
+  margin: 5px;
+}
+
+.bas a {
+  color: white;
+  text-decoration: none;
+}
+
+.bas a:hover {
+  text-decoration: underline dashed white;
+}
+
+#mon_canvas {
+  border: 1px solid #e11f26;
+  touch-action: none; 
+}
+
+/* Div pour réservation */
+ .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.menuh {
+  display: none;
+}
+
+
+/* Menu hamburger */
+@media screen and (max-width:680px) {
+  
+  .menuh {
+    display: contents;
+    width: 50%;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:680px) {
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  nav {
+    background: #e11f26;
+    left: 0;
+    position: fixed;
+    height: 220px;
+    top: 0;
+    left: -395px;
+    width: 310px;
+    z-index: 999;
+    -moz-transition: left 0.75s;
+    -webkit-transition: left 0.75s;
+    transition: left 0.75s;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  }
+  #nav-left ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #nav-left ul li a {
+    color: #ecf0f1;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-bottom: 20px;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+  }
+  #wrapper {
+    margin: 0 auto;
+    padding: 0 5px;
+    position: relative;
+    width: 930px;
+  }
+  #menu-left:not(target) {
+    cursor: pointer;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 28px;
+    line-height: 28px;
+  }
+  #nav-left:target {
+    left: 0;
+    -moz-transition: left 0.75s;
+    -webkit-transition: left 0.75s;
+    transition: left 0.75s;
+  }
+  .open-menu, #nav-left:target~* .close-menu {
+    display: block;
+  }
+  .close-menu, #nav-left:target~* .open-menu {
+    display: none;
+  }
+}
+
+
+/* mediaqueries et taille d'écran
+Smartphones < 480 px
+
+Tablettes (768 px - 991 px)
+
+Ordinateurs (992 px - 1199 px)
+*/
+
+
+/* Media queries pour les smartphones */
+@media screen and (max-width:480px) {
+
+  .logo {
+    width: 20%;
+    transform: scale(0.7);
+    margin-left: 20px;
+  }
+
+  #menu {
+    margin: 5px;
+  }
+
+  #titre h1 {
+    font-size: 20px;
+  }
+  .diapo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .images {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .boutton {
+    width: 50px;
+  }
+
+  #dateJ {
+    display: flex;
+    flex-direction: column;
+  } 
+
+  #jour {
+    width: 100%;
+    text-align: center;
+  }
+
+  #date {
+    width: 100%;
+    text-align: center;
+  } 
+
+  #carto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carte {
+    width: 100%;
+  }
+
+  #stationsVelo {
+    width: 100%;
+  }
+
+  .stations {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  #myModal button {
+    width: 50%;
+  }
+  
+  #mon_canvas {
+    width: 240px;
+    height: 200px;
+    border: 1px solid #e11f26;
+  }
+}
+
+/* Media queries pour les tablettes */
+@media screen and (min-width:480px) and (max-width:991px) {
+  
+  .logo {
+    width: 20%;
+    transform: scale(0.7);
+    margin-left: 20px;
+  }
+
+  #menu {
+    margin: 5px;
+  }
+
+  .navigation {
+    width: 80%;
+  }
+
+  .modal-content {
+    width: 60%;
+  }
+
+  #myModal button {
+    width: 60%;
+  }
+
+}

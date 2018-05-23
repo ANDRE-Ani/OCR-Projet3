@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Vélo'v</title>
+  <meta name="description" content="Vélo'v Location de vélos." />
+  <meta name="author" content="Patrice ANDREANI">
+  <meta name="keywords" content="vélo'v, location, vélos, lyon">
+  <meta charset="UTF-8">
+  <!-- import favicon, feuille de style et polices -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
+
+  <!-- definition du viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="Vélo'v Lyon">
+  <meta name="twitter:site" content="http://p3ocr.andre-ani.fr/" />
+  <meta name="twitter:title" content="Vélo'v Lyon" />
+  <meta name="twitter:description" content="Vélo'v Lyon" />
+  <meta name="twitter:image" content="http://p3ocr.andre-ani.fr/images/logo-velov.png" />
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Vélo'v Lyon" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://p3ocr.andre-ani.fr" />
+  <meta property="og:image" content="http://p3ocr.andre-ani.fr/images/logo-velov.png" />
+  <meta property="og:description" content="Vélo'v Lyon" />
+</head>
+
+<body>
+
+  <div class="main">
+
+    <header>
+
+      <!-- Section 1 : logo et menu principal de navigation -->
+      <section id="entete">
+        <div id="menu">
+          <div class="logo">
+            <a href="http://p3ocr.andre-ani.fr" title="Vélo'v Lyon">
+              <img src="images/logo-velov.png" alt="logo de Vélo'V" id="logo_accueil">
+            </a>
+          </div>
+
+         <div class="navigation">
+            <ul>
+              <li>
+                <a href="#titre">Accueil</a>
+              </li>
+              <li>
+                <a href="#presentation">Mode d'emploi</a>
+              </li>
+              <li>
+                <a href="#carto">Carte</a>
+              </li>
+              <li>
+                <a href="#stationsVelo">Réservation</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- menu hamburger -->
+          <div class="menuh">
+              <nav id="nav-left">
+                <ul>
+                  <li>
+                    <a href="#" aria-label="Close Navigation">&#10799;</a>
+                  </li>
+                  <li><a href="#titre">Accueil</a></li>
+                  <li><a href="#presentation">Mode d'emploi</a></li>
+                  <li><a href="#carto">Carte</a></li>
+                  <li><a href="#stationsVelo">Réservation</a></li>
+                </ul>
+              </nav>
+    
+              <div id="wrapper">
+                <div id="menu-left">
+                  <a href="#nav-left" class="open-menu" aria-label="Open Navigation">&#9776;</a>
+                  <a href="#" class="close-menu" aria-label="Close Navigation">&#10799;</a>
+                </div>
+              </div>
+            </div>
+          <!-- fin menu hamburger -->
+
+        </div>
+ 
+  </section>
+
+
+  <div id="titre">
+    <h1>Vélo'v, location de vélos en libre service à Lyon</h1>
+  </div>
+
+  <div id="dateJ">
+
+</div>
+
+<div id="stationsI">
+<div class="image">
+    <img src='images/station.png' alt="icone station velo'v">
+</div>
+
+<div id="stationsN">
+</div>
+</div>
+
+  </header>
+
+  <!-- Section 2 : diaporama -->
+  <section id="presentation">
+    <div class="diaporama">
+      <h2>Mode d'emploi</h2>
+      <div class="images">
+        <img class="diapo" src="images/diapo/diapo1.jpg" alt="présentation d'une station">
+        <img class="diapo" src="images/diapo/diapo4.jpg" alt="explication réservation 1">
+        <img class="diapo" src="images/diapo/diapo2.jpg" alt="vélos de vélo'v">
+        <img class="diapo" src="images/diapo/diapo5.jpg" alt="explication réservation 2">
+      </div>
+      <div class="boutton">
+        
+        <button id="button-left">&#10094;</button>
+        <button id="button-right">&#10095;</button>
+      
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Section 3 : carte des stations -->
+  <section id="carto">
+    <div class="carte">
+      <h2>Carte</h2>
+
+      <!-- carte google map -->
+      <div id="map"></div>
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+      </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFYvovaLqv-VgoR50r-G5G2GJP4weTaE8"></script>
+
+    </div>
+
+    <div id="stationsVelo">
+
+    <div class="stations">
+      <h2>Station</h2>
+
+
+      <!-- Fenetre de signature -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <canvas id="mon_canvas" width="290" height="200">
+            Message pour les navigateurs ne supportant pas encore canvas.
+          </canvas>
+
+          <canvas id="vide" width="290" height="200" style="display:none"></canvas>
+
+          <p>Signez puis confirmez votre réservation SVP</p>
+          <button id="valider">Confirmation</button>
+        </div>
+      </div>
+
+      <div id="choice">
+        <div id="stationC">
+        </div>
+
+        <div id="confirm">
+          <button id="reserv">Réservation</button>
+        </div>
+
+      </div>
+
+    </div>
+</div>
+
+<div id="modalIndispo" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <p>Désolé</p><br><p>Station <strong>indisponible</strong> pour le moment</p>
+        <button id="close" >Fermer</button>    
+      </div>
+</div>
+
+  </section>
+
+
+<!-- section 4 : réservation -->
+<section>
+  <div id="reservation">
+    <h2>Réservation</h2>
+
+    <div id="stationClient">
+    </div>
+
+    <div id="compteur">
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="bas">
+      <p><a href="http://p3ocr.andre-ani.fr/">Vélo'v</a> | Lyon | Copyright 2018 |
+        <a href="legales.html">Mentions Légales</a>
+      </p>
+    </div>
+  </footer>
+
+  </div>
+  <script src="js/compteur.js"></script>
+  <script src="js/signature.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/requete.js"></script>
+  <script src="js/main.js"></script>  
+  <script src="js/diapo.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/dateJ.js"></script>
+
+</body>
+
+</html>
